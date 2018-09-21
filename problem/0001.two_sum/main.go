@@ -1,13 +1,12 @@
-package leetcode
+package p0001
 
-
-func TwoSum(nums []int , target int) []int {
+func twoSum(nums []int , target int) []int {
 	numsMap := make(map[int]int, len(nums))
 
 	for i, val := range nums {
 		complement := target - val
 		if key, ok := numsMap[complement]; ok {
-			return  []int{i, key}
+			return  []int{key, i}
 		}
 		numsMap[val] = i
 	}
