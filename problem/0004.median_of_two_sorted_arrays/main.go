@@ -8,7 +8,6 @@ func findMedianSortedArrays(nums1 []int, nums2 []int) float64 {
 	len0 := totalLength / 2 + 1
 
 	var nowData, preData int
-	p0 := -1
 	getP1 := func() {
 		nowData =  nums1[p1]
 		p1++
@@ -17,8 +16,7 @@ func findMedianSortedArrays(nums1 []int, nums2 []int) float64 {
 		nowData =  nums2[p2]
 		p2++
 	}
-	for p0 < len0 - 1 {
-		p0++
+	for i := 0; i < len0; i++ {
 		preData = nowData
 		if p1 >= len1 {
 			getP2()
