@@ -2,13 +2,8 @@ package p0102
 
 import (
 	"container/list"
+	. "github.com/yxlimo/leetcode-go/pkg"
 )
-
-type TreeNode struct {
-	Val   int
-	Left  *TreeNode
-	Right *TreeNode
-}
 
 func levelOrder(root *TreeNode) [][]int {
 	if root == nil {
